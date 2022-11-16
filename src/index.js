@@ -22,7 +22,7 @@ writeFileSync('./record.csv', 'timestamp,type,price\n');
 
 // Iniciar puppeteer
 await puppeteer
-  .launch({ headless: true, executablePath: executablePath() })
+  .launch({ headless: false, executablePath: executablePath() })
   .then(async (browser) => {
     const page = await browser.newPage();
 
